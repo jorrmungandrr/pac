@@ -28,12 +28,15 @@ int main(int argc, char *argv[]){
         execl("/usr/bin/pacman", "pacman", "-Syu", NULL);
 
 
-    if( check_cmd(argv[1], cmd) ){
-        free(cmd);
-        free(arg_list);
-        catch_fire("Unknown command\n", 1);
+    if(!strchr(argv[1], '-')){
+        if( check_cmd(argv[1], cmd) ){
+            free(cmd);
+            free(arg_list);
+            catch_fire("Unknown command\n", 1);
+        }
     }
-
+    else
+        strcpy(cmd, argv[1]);
 
 
     arg_list[argc] = NULL;
