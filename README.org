@@ -4,9 +4,8 @@
 
 **** pac - simple pacman wrapper written in C
 This program came to be due to my frustration with pacman - the options are so damn unintuitive.
-dnf and apt do this better in my opinion, because their options are straightforward :
+dnf and apt do this better in my opinion, because their options are straightforward.
 
-```install, search, purge...```
 
 Why not have that kind of verbosity and power of pacman?
 
