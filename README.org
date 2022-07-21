@@ -1,0 +1,42 @@
+#+TITLE: pac
+
+* What is pac?
+
+**** pac - simple pacman wrapper written in C
+This program came to be due to my frustration with pacman - the options are so damn unintuitive.
+dnf and apt do this better in my opinion, because their options are straightforward :
+
+```install, search, purge...```
+
+Why not have that kind of verbosity and power of pacman?
+
+* Installation
+
+** Source
+
+#+begin_src
+sudo make install
+#+end_src
+
+* Running
+
+#+begin_src
+pac install <packages>
+    remove <pkgs>
+    purge <pkgs>
+    update
+    search <package>
+    query <package>
+    amputate
+#+end_src
+
+So, these are options presented in pacman syntax :
+
+#+begin_src
+install  > -S
+search   > -Ss
+query    > -Q
+remove   > -R
+purge    > -Rns
+amputate > -Rdd
+#+end_src
